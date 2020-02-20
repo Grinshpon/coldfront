@@ -14,6 +14,7 @@ class LDAPUserSearch(UserSearch):
     def __init__(self, user_search_string, search_by):
         super().__init__(user_search_string, search_by)
         self.LDAP_SERVER_URI = import_from_settings('LDAP_SERVER_URI')
+        print(self.LDAP_SERVER_URI)
         self.LDAP_USER_SEARCH_BASE = import_from_settings('LDAP_USER_SEARCH_BASE')
         self.LDAP_BIND_DN = import_from_settings('LDAP_BIND_DN', None)
         self.LDAP_BIND_PASSWORD = import_from_settings('LDAP_BIND_PASSWORD', None)
